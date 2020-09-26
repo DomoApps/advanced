@@ -1,5 +1,5 @@
 {
-  "name": "advanced",
+  "name": "cra-template-advanced",
   "version": "1.0.1",
   "scripts": {
     "prettify": "prettier --write './template/src/**/*.{ts,tsx}'",
