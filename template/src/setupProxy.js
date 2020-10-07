@@ -1,5 +1,5 @@
 const { Proxy } = require('@domoinc/ryuu-proxy');
-const manifest = require('./manifest.json');
+const manifest = require('../public/manifest.json');
 
 const config = { manifest };
 const proxy = new Proxy(config);
