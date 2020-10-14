@@ -16,7 +16,7 @@
     "reduxjs",
     "react-redux"
   ],
-  "description": "The official Redux+TS template for Create React App",
+  "description": "Domo Advanced App Platform React Starter Kit",
   "main": "template.json",
   "repository": {
     "type": "git",
