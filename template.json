@@ -13,10 +13,20 @@
       "react-redux": "^7.2.0",
       "typescript": "~3.8.2",
       "@domoinc/ryuu-proxy": "^4.0.6",
-      "node-sass": "^4.14.1"
+      "node-sass": "^4.14.1",
+      "@babel/core": "^7.12.0",
+      "@storybook/addon-actions": "^6.0.26",
+      "@storybook/addon-essentials": "^6.0.26",
+      "@storybook/addon-links": "^6.0.26",
+      "@storybook/node-logger": "^6.0.26",
+      "@storybook/preset-create-react-app": "^3.1.4",
+      "@storybook/react": "^6.0.26",
+      "babel-loader": "^8.1.0",
+      "react-is": "^16.13.1"
     },
     "scripts": {
-      "upload": "yarn build && cd build && domo publish && cd .."
+      "upload": "yarn build && cd build && domo publish && cd ..",
+      "storybook": "start-storybook -p 6006 -s public"
     }
   }
 }
