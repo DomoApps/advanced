@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { selectCount } from 'reducers/counter';
 import {
-  selectCount,
-} from 'reducers/counter';
-import { increment, decrement, incrementByAmount, incrementAsync } from 'actions/counter';
+  increment,
+  decrement,
+  incrementByAmount,
+  incrementAsync,
+} from 'actions/counter';
 import styles from './index.module.scss';
 
-export function Counter() {
+export const Counter = () => {
   const count = useSelector(selectCount);
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');
@@ -40,18 +43,18 @@ export function Counter() {
         <button
           className={styles.button}
           onClick={() =>
-            dispatch(incrementByAmount(Number(incrementAmount) || 0))
+            dispatch(incrementByAmount(Number(incrementAmount) ?? 0))
           }
         >
           Add Amount
         </button>
         <button
           className={styles.asyncButton}
-          onClick={() => dispatch(incrementAsync(Number(incrementAmount) || 0))}
+          onClick={() => dispatch(incrementAsync(Number(incrementAmount) ?? 0))}
         >
           Add Async
         </button>
       </div>
     </div>
   );
-}
+};

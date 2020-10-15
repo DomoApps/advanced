@@ -1,13 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './AdvancedAppPlatform.png';
 import { Counter } from 'components/counter';
 import styles from './index.module.scss';
 
-function App() {
+const App = () => {
   return (
     <div className={styles.App}>
       <header className={styles.App__header}>
         <img src={logo} className={styles.App__logo} alt="logo" />
+        <h1>Advanced App Platform Package</h1>
         <Counter />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -53,6 +54,6 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
 export default App;
