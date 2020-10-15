@@ -43,14 +43,28 @@ export const Counter = () => {
         <button
           className={styles.button}
           onClick={() =>
-            dispatch(incrementByAmount(Number(incrementAmount) ?? 0))
+            dispatch(
+              incrementByAmount(
+                !Number.isNaN(Number(incrementAmount))
+                  ? Number(incrementAmount)
+                  : 0,
+              ),
+            )
           }
         >
           Add Amount
         </button>
         <button
           className={styles.asyncButton}
-          onClick={() => dispatch(incrementAsync(Number(incrementAmount) ?? 0))}
+          onClick={() =>
+            dispatch(
+              incrementAsync(
+                !Number.isNaN(Number(incrementAmount))
+                  ? Number(incrementAmount)
+                  : 0,
+              ),
+            )
+          }
         >
           Add Async
         </button>
