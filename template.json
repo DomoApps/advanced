@@ -30,12 +30,14 @@
       "@typescript-eslint/eslint-plugin": "^1.13.0",
       "@typescript-eslint/parser": "^1.13.0",
       "prettier": "^1.18.2",
+      "plop": "^2.7.4",
       "@domoapps/eslint-config": "git+ssh://git@github.com:DomoApps/eslint-config.git#1.1.0",
       "@domoapps/prettier-config": "git+ssh://git@github.com:DomoApps/prettier-config.git#1.1.0"
     },
     "scripts": {
       "upload": "yarn build && cd build && domo publish && cd ..",
-      "storybook": "start-storybook -p 6006 -s public"
+      "storybook": "start-storybook -p 6006 -s public",
+      "generate": "plop"
     }
   }
 }
