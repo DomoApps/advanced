@@ -1,5 +1,5 @@
 module.exports = plop => {
-    plop.setGenerator('component', { // TODO: copy thos whole function call but swap out to reducers
+    plop.setGenerator('component', {
         description: 'Create a component',
         // User input prompts provided as arguments to the template
         prompts: [
@@ -17,7 +17,7 @@ module.exports = plop => {
                 // Variable name for this input
                 name: 'test',
                 // Prompt to display on command line
-                message: 'Would you like to add a test file for this component?'
+                message: 'Would you like to include a test file for this component?'
             },
             {
                 // Raw text input
@@ -25,7 +25,7 @@ module.exports = plop => {
                 // Variable name for this input
                 name: 'storybook',
                 // Prompt to display on command line
-                message: 'Would you like to add a storybook file for this component?'
+                message: 'Would you like to include a storybook file for this component?'
             },
         ],
         actions: (input) => [
@@ -67,6 +67,51 @@ module.exports = plop => {
                     templateFile: 'templates/storybook.tsx.hbs',
                 },
             ])
+        ]
+    });
+
+    plop.setGenerator('reducer', {
+        description: 'Create a reducer',
+        // User input prompts provided as arguments to the template
+        prompts: [
+            {
+                // Raw text input
+                type: 'input',
+                // Variable name for this input
+                name: 'name',
+                // Prompt to display on command line
+                message: 'What would you like to call your reducer?'
+            }
+        ],
+        actions: () => [
+            {
+                // Add a new file
+                type: 'add',
+                // Path for the new file
+                path: 'src/reducers/{{name}}/index.tsx',
+                // Handlebars template used to generate content of new file
+                templateFile: 'templates/reducer.ts.hbs',
+            },
+            {
+                // Add a new file
+                type: 'add',
+                // Path for the new file
+                path: 'src/actions/{{name}}/index.ts',
+                // Handlebars template used to generate content of new file
+                templateFile: 'templates/actions.ts.hbs',
+            },
+            {
+                type: 'modify',
+                path: 'src/reducers/index.ts',
+                pattern: /\/\/\ importRef/,
+                templateFile: 'templates/reducerImport.hbs',
+            },
+            {
+                type: 'modify',
+                path: 'src/reducers/index.ts',
+                pattern: /\/\/\ reducerRef/,
+                templateFile: 'templates/reducerWiring.hbs',
+            }
         ]
     });
 };
