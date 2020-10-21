@@ -14,16 +14,19 @@ const counterReducer = createReducer(initialState, (counter) => {
   counter
     .addCase(increment, (state: CounterState) => ({
       ...state,
-      value: state.value + 1
+      value: state.value + 1,
     }))
     .addCase(decrement, (state: CounterState) => ({
       ...state,
-      value: state.value - 1
+      value: state.value - 1,
     }))
-    .addCase(incrementByAmount, (state: CounterState, { payload }: PayloadAction<number>) => ({
-      ...state,
-      value: state.value + payload
-    }))
+    .addCase(
+      incrementByAmount,
+      (state: CounterState, { payload }: PayloadAction<number>) => ({
+        ...state,
+        value: state.value + payload,
+      }),
+    );
 });
 
 // The function below is called a selector and allows us to select a value from
@@ -32,4 +35,3 @@ const counterReducer = createReducer(initialState, (counter) => {
 export const selectCount = (state: RootState) => state.counter.value;
 
 export default counterReducer;
-

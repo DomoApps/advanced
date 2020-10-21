@@ -1,3 +1,3 @@
 module.exports = {
-    extends: '@domoapps/eslint-config',
+  extends: '@domoapps/eslint-config',
 };

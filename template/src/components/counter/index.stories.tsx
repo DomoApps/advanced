@@ -5,8 +5,8 @@ import { Counter } from '.';
 import { Provider } from 'react-redux';
 
 export default {
-    title: 'Counter',
-    component: Counter,
+  title: 'Counter',
+  component: Counter,
 } as Meta;
 
 // EXAMPLE:
@@ -18,7 +18,11 @@ export default {
 //   label: 'Button',
 // };
 
-const Template: Story = () => (<Provider store={store}><Counter /></Provider>);
+const Template: Story = () => (
+  <Provider store={store}>
+    <Counter />
+  </Provider>
+);
 
 export const Default = Template.bind({});
 Default.args = {};
