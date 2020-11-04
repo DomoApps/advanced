@@ -38,6 +38,8 @@
       "upload": "yarn build && cd build && domo publish && cd ..",
       "storybook": "start-storybook -p 6006 -s public",
       "generate": "da generate",
+      "prestart": "da apply-manifest start",
+      "postbuild": "da apply-manifest build"
     }
   }
 }
