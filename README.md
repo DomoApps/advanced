@@ -1,20 +1,12 @@
-# cra-template-redux-typescript
+# DomoApps Advanced App Platform Template
 
-The official Redux+TS template for [Create React App](https://github.com/facebook/create-react-app).
+This is the template for creating an app based on [Create React App](https://github.com/facebook/create-react-app) with our own additions, base files, and generators.
 
-To use this template, add `--template redux-typescript` when creating a new app.
-
-For example:
-
+To use this template, run the following command:
 ```sh
-npx create-react-app my-app --template redux-typescript
-
-# or
-
-yarn create react-app my-app --template redux-typescript
+yarn create react-app my-app --template git+ssh://git@github.com/DomoApps/advanced.git
 ```
 
 For more information, please refer to:
 
-- [Getting Started](https://create-react-app.dev/docs/getting-started) – How to create a new app.
 - [User Guide](https://create-react-app.dev) – How to develop apps bootstrapped with Create React App.
