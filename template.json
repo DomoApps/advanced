@@ -34,6 +34,7 @@
       "@domoapps/da": "git+ssh://git@github.com:DomoApps/da.git#1.0.1"
     },
     "scripts": {
+      "lint": "eslint 'src/**/*.ts?(x)'",
       "upload": "yarn build && cd build && domo publish && cd ..",
       "storybook": "start-storybook -p 6006 -s public",
       "generate": "da generate",
