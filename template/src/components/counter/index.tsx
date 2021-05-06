@@ -6,6 +6,7 @@ import {
   decrement,
   incrementByAmount,
   incrementAsync,
+  incrementAsyncThunk,
 } from 'actions/counter';
 import styles from './index.module.scss';
 
@@ -67,6 +68,20 @@ export const Counter = () => {
           }
         >
           Add Async
+        </button>
+        <button
+          className={styles.asyncButton}
+          onClick={() =>
+            dispatch(
+              incrementAsyncThunk(
+                !Number.isNaN(Number(incrementAmount))
+                  ? Number(incrementAmount)
+                  : 0,
+              ),
+            )
+          }
+        >
+          Add Async Thunk
         </button>
       </div>
     </div>

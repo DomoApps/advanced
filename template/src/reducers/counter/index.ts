@@ -1,5 +1,10 @@
 import { createReducer, PayloadAction } from '@reduxjs/toolkit';
-import { increment, decrement, incrementByAmount } from 'actions/counter';
+import {
+  increment,
+  decrement,
+  incrementByAmount,
+  incrementAsyncThunk,
+} from 'actions/counter';
 import { RootState } from '..';
 
 interface CounterState {
@@ -22,6 +27,13 @@ const counterReducer = createReducer(initialState, (counter) => {
     }))
     .addCase(
       incrementByAmount,
+      (state: CounterState, { payload }: PayloadAction<number>) => ({
+        ...state,
+        value: state.value + payload,
+      }),
+    )
+    .addCase(
+      incrementAsyncThunk.fulfilled,
       (state: CounterState, { payload }: PayloadAction<number>) => ({
         ...state,
         value: state.value + payload,
