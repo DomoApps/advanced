@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectCount } from 'reducers/counter';
+import { selectCount } from 'reducers/counter/reducer';
 import {
   increment,
   decrement,
   incrementByAmount,
   incrementAsync,
   incrementAsyncThunk,
-} from 'actions/counter';
+} from 'reducers/counter/actions';
 import styles from './index.module.scss';
 
 export const Counter = () => {

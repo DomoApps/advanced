@@ -1,5 +1,5 @@
 import { createAction, createAsyncThunk } from '@reduxjs/toolkit';
-import { AppThunk } from 'reducers';
+import { AppThunk } from '..';
 
 export const increment = createAction('INCREMENT');
 export const decrement = createAction('DECREMENT');

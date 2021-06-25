@@ -4,7 +4,7 @@ import {
   decrement,
   incrementByAmount,
   incrementAsyncThunk,
-} from 'actions/counter';
+} from './actions';
 import { RootState } from '..';
 
 interface CounterState {
