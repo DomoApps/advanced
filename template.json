@@ -12,10 +12,13 @@
     "scripts": {
       "lint": "eslint 'src/**/*.ts?(x)'",
       "upload": "yarn build && cd build && domo publish && cd ..",
+      "upload:prod": "yarn build:prod && cd build && domo publish && cd ..",
       "storybook": "start-storybook -p 6006 -s public",
       "generate": "da generate",
       "prestart": "da apply-manifest start",
-      "postbuild": "da apply-manifest build"
+      "postbuild": "da apply-manifest build",
+      "build:prod": "GENERATE_SOURCEMAP=false react-scripts build",
+      "postbuild:prod": "da apply-manifest build"
     },
     "devDependencies": {
       "babel-loader": "^8.2.3",
