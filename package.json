@@ -1,6 +1,6 @@
 {
   "name": "advanced",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "scripts": {
     "prettify": "prettier --write './template/src/**/*.{ts,tsx}'",
     "lint": "eslint './template/src/**/*.{ts,tsx}'",
@@ -42,7 +42,7 @@
     "@types/jest": "^26.0.20",
     "@types/node": "^14.14.22",
     "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
+    "@types/react-dom": "^18.0.6",
     "@types/react-redux": "^7.1.15",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
