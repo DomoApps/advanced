@@ -1,13 +1,13 @@
-import Enzyme, { shallow } from 'enzyme';
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import React from 'react';
+import { render } from '@testing-library/react';
 import App from '.';
-
-Enzyme.configure({ adapter: new Adapter() });
 
 describe('When rendering App', () => {
   it('should render', () => {
-    const component = shallow(<App />);
+    const { getAllByRole } = render(
+        <App />,
+    );
 
-    expect(component.exists()).toBe(true);
+    expect(getAllByRole('generic')).toBeTruthy();
   });
 });
