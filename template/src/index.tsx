@@ -1,15 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './styles/index.scss';
-import App from 'components/app';
-import { store } from './reducers';
+import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
+import { store } from './reducers';
+import App from 'components/app';
 
-ReactDOM.render(
+import './styles/index.scss';
+
+const container = document.getElementById('root');
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+const root = createRoot(container!);
+root.render(
   <React.StrictMode>
     <Provider store={store}>
       <App />
     </Provider>
   </React.StrictMode>,
-  document.getElementById('root'),
 );
