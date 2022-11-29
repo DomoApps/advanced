@@ -16,6 +16,6 @@ For more information, please refer to:
 
 By default, the generated app will subscribe to the `onDataUpdate` event on the parent iframe. This notifies the App Platform that this app should not be forced to reload automatically when one or more of its connected datasets change.
 
-If your app needs the auto-reload, you can remove the `onDataUpdate` block of code - or make changes accordingly.
+If your app needs the auto-reload, you can remove the `onDataUpdate` block of code - or make changes accordingly. The function call is placed in this file: `src/index.tsx`.
 
-For reference: [Handling Data Updates](https://developer.domo.com/docs/dev-studio-guides/handling-data-updates)
+For reference: [Handling Data Updates](https://developer.domo.com/docs/dev-studio-guides/handling-data-updates).
