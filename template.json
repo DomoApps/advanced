@@ -16,7 +16,12 @@
       "prestart": "da apply-manifest start",
       "postbuild": "da apply-manifest build && da build-replacements",
       "build:prod": "GENERATE_SOURCEMAP=false react-scripts build",
-      "postbuild:prod": "da apply-manifest build && da build-replacements"
+      "postbuild:prod": "da apply-manifest build && da build-replacements",
+      "build:ci:dev": "GENERATE_SOURCEMAP=false react-scripts build && da apply-manifest build dev && da build-replacements",
+      "build:ci:qa": "GENERATE_SOURCEMAP=false react-scripts build && da apply-manifest build qa && da build-replacements",
+      "deploy:ci:dev": "yarn build:ci:dev && cd build && domo publish && cd ..",
+      "deploy:ci:qa": "yarn build:ci:qa && cd build && domo publish && cd ..",
+      "test:ci": "npm run test -- --watchAll=false --ci --runInBand --forceExit"
     },
     "devDependencies": {
       "@babel/core": "^7.12.0",
