@@ -25,9 +25,9 @@
     },
     "devDependencies": {
       "@babel/core": "^7.12.0",
-      "@domoapps/da": "git+ssh://git@github.com:DomoApps/da.git#1.2.0",
-      "@domoapps/eslint-config": "git+ssh://git@github.com:DomoApps/eslint-config.git#1.2.1",
-      "@domoapps/prettier-config": "git+ssh://git@github.com:DomoApps/prettier-config.git#1.2.0",
+      "@domoapps/da": "git+ssh://git@github.com:DomoApps/da.git",
+      "@domoapps/eslint-config": "git+ssh://git@github.com:DomoApps/eslint-config.git",
+      "@domoapps/prettier-config": "git+ssh://git@github.com:DomoApps/prettier-config.git",
       "@domoinc/ryuu-proxy": "^4.0.6",
       "@storybook/addon-actions": "^6.5.13",
       "@storybook/addon-essentials": "^6.5.13",
