@@ -8,6 +8,7 @@
       "ryuu.js": "^4.2.0"
     },
     "scripts": {
+      "start:pagefilters": "da with-filters",
       "lint": "eslint 'src/**/*.ts?(x)'",
       "upload": "yarn build && cd build && domo publish && cd ..",
       "upload:prod": "yarn build:prod && cd build && domo publish && cd ..",
