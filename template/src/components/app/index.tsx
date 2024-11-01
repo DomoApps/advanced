@@ -9,10 +9,6 @@ const App = () => (
       <img src={logo} className={styles.App__logo} alt="logo" />
       <h1>Advanced App Platform Package</h1>
       <Counter />
-      <p>
-        {window.DATranslations.Text.edit} <code>src/App.tsx</code>{' '}
-        {window.DATranslations.Text.saveToReload}.
-      </p>
       <span>
         <span>Learn </span>
         <a
