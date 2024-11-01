@@ -1,7 +1,6 @@
 {
   "package": {
     "dependencies": {
-      "@domoapps/react-components": "git+ssh://git@github.com:DomoApps/React-Components.git",
       "@reduxjs/toolkit": "^1.2.5",
       "react-redux": "^7.2.0",
       "typescript": "^4.0.3",

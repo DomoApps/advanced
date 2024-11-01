@@ -2,7 +2,6 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import RyuuJS from 'ryuu.js';
-import { TranslatedApp } from '@domoapps/react-components';
 
 import { store } from './reducers';
 import App from 'components/app';
@@ -18,7 +17,7 @@ const root = createRoot(container!);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <TranslatedApp appComponent={App} />
+      <App />
     </Provider>
   </React.StrictMode>,
 );
