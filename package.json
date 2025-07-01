@@ -1,6 +1,6 @@
 {
   "name": "@domoinc/cra-template-advanced",
-  "version": "2.3.4",
+  "version": "2.3.5",
   "scripts": {
     "prettify": "prettier --write './template/src/**/*.{ts,tsx}'",
     "lint": "eslint './template/src/**/*.{ts,tsx}'",
